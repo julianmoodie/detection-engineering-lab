@@ -1,0 +1,44 @@
+Patterns
+private keys
+\b5[1-9A-HJ-NP-Za-km-z]{50}\b|\b[KL][1-9A-HJ-NP-Za-km-z]{51}\b
+
+Ethereum private key format
+\b0x[0-9a-fA-F]{64}\b
+
+12-word seed phrase
+\b[a-z]{3,8}\s[a-z]{3,8}\s[a-z]{3,8}\s[a-z]{3,8}\s[a-z]{3,8}\s[a-z]{3,8}\s[a-z]{3,8}\s[a-z]{3,8}\s[a-z]{3,8}\s[a-z]{3,8}\s[a-z]{3,8}\s[a-z]{3,8}\b
+
+
+
+
+Count All
+private key
+
+Count All
+wallet seed
+
+Count All
+seed phrase
+
+Count All
+recovery phrase
+
+Count All
+mnemonic
+
+Count All
+secret recovery
+
+Count All
+wallet backup
+
+Count All
+keystore
+
+Count All
+priv key
+
+Count All
+wallet key
+
+Count All
