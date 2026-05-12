@@ -1,0 +1,51 @@
+(
+    CommandLine = "**Invoke-WebRequest**"
+    OR CommandLine = "**iwr**"
+    OR CommandLine = "**curl**"
+    OR CommandLine = "**wget**"
+)
+AND
+(
+    CommandLine = "**.xlsx**"
+    OR CommandLine = "**.xls**"
+    OR CommandLine = "**.csv**"
+    OR CommandLine = "**.zip**"
+    OR CommandLine = "**.rar**"
+    OR CommandLine = "**.7z**"
+    OR CommandLine = "**.tar**"
+    OR CommandLine = "**.gz**"
+    OR CommandLine = "**.bak**"
+    OR CommandLine = "**.backup**"
+    OR CommandLine = "**.sql**"
+    OR CommandLine = "**.db**"
+    OR CommandLine = "**.env**"
+    OR CommandLine = "**.pem**"
+    OR CommandLine = "**.key**"
+    OR CommandLine = "**.pfx**"
+    OR CommandLine = "**.crt**"
+    OR CommandLine = "**.conf**"
+    OR CommandLine = "**.config**"
+    OR CommandLine = "**.json**"
+    OR CommandLine = "**.yaml**"
+    OR CommandLine = "**.yml**"
+    OR CommandLine = "**.txt**"
+)
+AND
+(
+    CommandLine = "**post**"
+    OR CommandLine = "**put**"
+    OR CommandLine = "**patch**"
+)
+AND
+(
+    CommandLine = "**-infile**"
+    OR CommandLine = "**--data**"
+    OR CommandLine = "**--data-binary**"
+    OR CommandLine = "**-f **"
+    OR CommandLine = "**uploadfile**"
+    OR CommandLine = "**--post-file**"
+)
+AND FileName != "podman-remote"
+| table([aid, ComputerName, UserName, FileName, CommandLine, SHA256])
+
+
